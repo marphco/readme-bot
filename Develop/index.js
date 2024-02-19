@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path");
-const generateMarkdown = require("./Develop/utils/generateMarkdown"); // Adjust this path as necessary
+const generateMarkdown = require("./utils/generateMarkdown");
 
 // Questions for user input
 const questions = [
@@ -52,7 +52,7 @@ const questions = [
     name: "email",
     message: "Enter your email address:",
     validate: function(input) {
-      // Provided regex for email validation
+      // Regex for email validation found on https://emailregex.com/
       const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       if (!input) {
         return "Email address is required."; // Ensures the input is not empty
@@ -66,17 +66,19 @@ const questions = [
 
 // Function to write README file
 function writeToFile(fileName, data) {
-  const outputDir = path.join(process.cwd(), 'output');
+  const outputDir = path.join(__dirname, 'output');
   
+  // Check if the output directory exists, if not, create it
   if (!fs.existsSync(outputDir)){
-    fs.mkdirSync(outputDir, { recursive: true });
+    fs.mkdirSync(outputDir);
   }
 
+  // Define the full path for the new README file within the output directory
   fs.writeFileSync(path.join(outputDir, fileName), data);
   console.log("Successfully created README.md in the 'output' folder");
 }
 
-// Function to initialize app
+// Initialization function
 function init() {
   inquirer.prompt(questions).then((answers) => {
     const readmeContent = generateMarkdown(answers);

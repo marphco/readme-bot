@@ -1,14 +1,14 @@
 {
-  "name": "readme-bot",
+  "name": "develop",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "marphco",
-  "license": "MIT",
   "keywords": [],
-  "description": "",
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "inquirer": "^8.2.4"
   }
