@@ -26,7 +26,7 @@ To use Readme Bot, follow these steps:
 3. Answer the prompts with your project's information.
 4. Find your generated README.md in the project directory.
 
-<video controls src="https://vimeo.com/915013027?share=copy" title="Readme Bot" width="80%"></video>
+https://github.com/marphco/readme-bot/assets/5993166/550033ca-1493-4844-9ca1-b48a93faf4d2
 
 ## License
 This project is licensed under the [MIT](https://opensource.org/licenses/MIT) license.
