@@ -14,7 +14,7 @@ Readme Bot is a command-line tool that automates the creation of professional RE
 
 ## Installation
 To install Readme Bot, follow these steps:
-1. Clone the repository to your local machine using `git clone https://github.com/yourusername/readme-bot.git`
+1. Clone the repository to your local machine using `git clone https://github.com/marphco/readme-bot.git`
 2. Navigate into the project directory: `cd readme-bot/Develop`
 3. Initialize a project and create the package.json file: `npm init -y`
 4. Install the required dependencies: `npm i inquirer@8.2.4`
